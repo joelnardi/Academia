@@ -17,6 +17,7 @@ namespace Data.Database
 
             try
             {
+                this.OpenConnection();
                 SqlCommand cmdEspecialidades = new SqlCommand("select * from especialidades", SqlConn);
                 SqlDataReader drEspecialidades = cmdEspecialidades.ExecuteReader();
                 while (drEspecialidades.Read())
@@ -47,7 +48,7 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdEspecialidades = new SqlCommand("select * from especialidades where id_especialidad = @id");
+                SqlCommand cmdEspecialidades = new SqlCommand("select * from especialidades where id_especialidad = @id", SqlConn);
                 cmdEspecialidades.Parameters.Add("@id", SqlDbType.Int).Value = ID;
                 SqlDataReader drEspecialidades = cmdEspecialidades.ExecuteReader();
 
@@ -120,8 +121,11 @@ namespace Data.Database
         {
             try
             {
-                SqlCommand cmdEspecialidad = new SqlCommand("update usuarios set desc_especialidad=@descripcion", SqlConn);
+                this.OpenConnection();
+                SqlCommand cmdEspecialidad = new SqlCommand("update especialidades set desc_especialidad = @descripcion "+
+                    "where id_especialidad = @id", SqlConn);
                 cmdEspecialidad.Parameters.Add("@descripcion", SqlDbType.VarChar, 50).Value = esp.Descripcion;
+                cmdEspecialidad.Parameters.Add("@id", SqlDbType.Decimal).Value = esp.ID;
                 cmdEspecialidad.ExecuteNonQuery();
             }
             catch(Exception Ex)
@@ -139,7 +143,8 @@ namespace Data.Database
         {
             try
             {
-                SqlCommand cmdInsert = new SqlCommand("insert into usuarios(desc_especialidad) values(@descripcion) select @@identity", SqlConn);
+                this.OpenConnection();
+                SqlCommand cmdInsert = new SqlCommand("insert especialidades (desc_especialidad) values (@descripcion) select @@identity", SqlConn);
                 cmdInsert.Parameters.Add("@descripcion", SqlDbType.VarChar, 50).Value = es.Descripcion;
                 es.ID = Decimal.ToInt32((decimal)cmdInsert.ExecuteScalar());
             }

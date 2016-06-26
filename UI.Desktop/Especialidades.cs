@@ -58,7 +58,7 @@ namespace UI.Desktop
         {
             if (this.dgvEspecialidades.SelectedRows.Count != 0)
             {
-                int ID = ((Business.Entities.Usuario)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Business.Entities.Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
                 EspecialidadDesktop formEspecialidad = new EspecialidadDesktop(ID, ApplicationForm.ModoForm.Modificacion);
                 formEspecialidad.ShowDialog();
             }
@@ -69,7 +69,7 @@ namespace UI.Desktop
         {
             if (this.dgvEspecialidades.SelectedRows.Count != 0)
             {
-                int ID = ((Business.Entities.Usuario)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Business.Entities.Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
                 EspecialidadDesktop formEspecialidad = new EspecialidadDesktop(ID, ApplicationForm.ModoForm.Baja);
                 formEspecialidad.ShowDialog();
             }

@@ -13,17 +13,20 @@ namespace Negocio
     {
 
 
+        #region Properties
         public UsuarioAdapter UsuarioData
         {
             get;
             set;
         }
-
+        #endregion
+        #region Constructores
         public UsuarioLogic() 
         {
             UsuarioData = new UsuarioAdapter();
         }
-
+        #endregion
+        #region Metodos de salvado y recuperacion de datos
         public List<Usuario> GetAll()
         {
             try
@@ -50,6 +53,6 @@ namespace Negocio
         {
             UsuarioData.Save(usr);
         }
-
+        #endregion
     }
 }
