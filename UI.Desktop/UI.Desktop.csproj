@@ -61,11 +61,17 @@
     <Compile Include="Especialidades.Designer.cs">
       <DependentUpon>Especialidades.cs</DependentUpon>
     </Compile>
-    <Compile Include="Generico.cs">
+    <Compile Include="Planes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Generico.Designer.cs">
-      <DependentUpon>Generico.cs</DependentUpon>
+    <Compile Include="Planes.Designer.cs">
+      <DependentUpon>Planes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlanesDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanesDesktop.Designer.cs">
+      <DependentUpon>PlanesDesktop.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuarioDesktop.cs">
       <SubType>Form</SubType>
@@ -87,8 +93,11 @@
     <EmbeddedResource Include="Especialidades.resx">
       <DependentUpon>Especialidades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Generico.resx">
-      <DependentUpon>Generico.cs</DependentUpon>
+    <EmbeddedResource Include="Planes.resx">
+      <DependentUpon>Planes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanesDesktop.resx">
+      <DependentUpon>PlanesDesktop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioDesktop.resx">
       <DependentUpon>UsuarioDesktop.cs</DependentUpon>

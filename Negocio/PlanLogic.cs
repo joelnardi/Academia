@@ -8,7 +8,7 @@ using Business.Entities;
 
 namespace Negocio
 {
-    class PlanLogic : Negocio
+    public class PlanLogic : Negocio
     {
         #region Properties
         public PlanAdapter PlanData

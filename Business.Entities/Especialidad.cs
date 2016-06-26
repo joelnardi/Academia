@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Business.Entities
 {
-    public class Especialidad: BusinessEntity
+    public class Especialidad : BusinessEntity
     {
         private string _descripcion;
 
@@ -20,6 +20,12 @@ namespace Business.Entities
             {
                 this._descripcion = value;
             }
+
+            
+        }
+        public override string ToString()
+        {
+            return this.Descripcion;
         }
     }
 }
