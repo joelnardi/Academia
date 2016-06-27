@@ -24,7 +24,7 @@ namespace Data.Database
                     Plan pla = new Plan();
                     pla.ID = (int)drPlanes["id_plan"];
                     pla.Descripcion = (string)drPlanes["desc_plan"];
-                    pla.IdEspecialidad = (int)drPlanes["id_especialidad"];
+                    pla.especialidad = (new EspecialidadAdapter()).GetOne((int)drPlanes["id_especialidad"]); 
                     pl.Add(pla);
                 }
             }
@@ -53,7 +53,7 @@ namespace Data.Database
                 {
                     pl.ID = (int)drPlanes["id_plan"];
                     pl.Descripcion = (string)drPlanes["desc_plan"];
-                    pl.IdEspecialidad = (int)drPlanes["id_especialidad"];
+                    pl.especialidad = (new EspecialidadAdapter()).GetOne((int)drPlanes["id_especialidad"]);
 
                 }
             }
@@ -138,7 +138,7 @@ namespace Data.Database
                     "id_especialidad = @id_especialidad", SqlConn);
                 cmdPlan.Parameters.Add("@id", SqlDbType.Int).Value = pl.ID;
                 cmdPlan.Parameters.Add("@descripcion", SqlDbType.VarChar, 50).Value = pl.Descripcion;
-                cmdPlan.Parameters.Add("@id_especialidad", SqlDbType.Int).Value = pl.IdEspecialidad;
+                cmdPlan.Parameters.Add("@id_especialidad", SqlDbType.Int).Value = pl.especialidad.ID;
                 cmdPlan.ExecuteNonQuery();
             }
             catch (Exception Ex)
@@ -159,7 +159,7 @@ namespace Data.Database
                 this.OpenConnection();
                 SqlCommand cmdPlan = new SqlCommand("insert into planes (desc_plan, id_especialidad) values(@descripcion, @id_esp) select @@identity", SqlConn);
                 cmdPlan.Parameters.Add("@descripcion", SqlDbType.VarChar, 50).Value = pl.Descripcion;
-                cmdPlan.Parameters.Add("@id_esp", SqlDbType.Int).Value = pl.IdEspecialidad;
+                cmdPlan.Parameters.Add("@id_esp", SqlDbType.Int).Value = pl.especialidad.ID;
                 pl.ID = Decimal.ToInt32((decimal)cmdPlan.ExecuteScalar());
             }
             catch (Exception e)

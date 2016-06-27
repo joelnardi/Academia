@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.cmbEspecialidades = new System.Windows.Forms.ComboBox();
             this.tlPlanDesktop = new System.Windows.Forms.TableLayoutPanel();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -36,7 +37,7 @@
             this.lblEspecialidad = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.cmbEspecialidades = new System.Windows.Forms.ComboBox();
+            //cmbEspecialidades = new System.Windows.Forms.ComboBox();
             this.tlPlanDesktop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             this.tlPlanDesktop.Controls.Add(this.lblEspecialidad, 0, 2);
             this.tlPlanDesktop.Controls.Add(this.txtID, 1, 0);
             this.tlPlanDesktop.Controls.Add(this.txtDescripcion, 1, 1);
-            this.tlPlanDesktop.Controls.Add(this.cmbEspecialidades, 1, 2);
+            this.tlPlanDesktop.Controls.Add(cmbEspecialidades, 1, 2);
             this.tlPlanDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlPlanDesktop.Location = new System.Drawing.Point(0, 0);
             this.tlPlanDesktop.Name = "tlPlanDesktop";
@@ -73,6 +74,7 @@
             this.btnAceptar.TabIndex = 0;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -83,6 +85,7 @@
             this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblID
             // 
@@ -133,12 +136,12 @@
             // 
             // cmbEspecialidades
             // 
-            this.cmbEspecialidades.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cmbEspecialidades.FormattingEnabled = true;
-            this.cmbEspecialidades.Location = new System.Drawing.Point(145, 152);
-            this.cmbEspecialidades.Name = "cmbEspecialidades";
-            this.cmbEspecialidades.Size = new System.Drawing.Size(121, 21);
-            this.cmbEspecialidades.TabIndex = 7;
+            cmbEspecialidades.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            cmbEspecialidades.FormattingEnabled = true;
+            cmbEspecialidades.Location = new System.Drawing.Point(145, 152);
+            cmbEspecialidades.Name = "cmbEspecialidades";
+            cmbEspecialidades.Size = new System.Drawing.Size(121, 21);
+            cmbEspecialidades.TabIndex = 7;
             // 
             // PlanesDesktop
             // 

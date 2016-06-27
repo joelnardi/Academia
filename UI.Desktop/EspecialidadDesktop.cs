@@ -151,6 +151,7 @@ namespace UI.Desktop
         {
             this.txtId.Text = EspecialidadActual.ID.ToString();
             this.txtDescripcion.Text = EspecialidadActual.Descripcion;
+            
             switch (this.Modo)
             {
                 case ModoForm.Alta:
@@ -171,7 +172,7 @@ namespace UI.Desktop
 
         }
 
-        public virtual void MapearADatos()
+        public override void MapearADatos()
         {
             if (this.Modo == ModoForm.Alta)
             {
@@ -244,6 +245,7 @@ namespace UI.Desktop
         {
             this.Close();
         }
+
     }
 
 

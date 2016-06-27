@@ -12,7 +12,8 @@ namespace Business.Entities
         {
             get; set;
         }
-        public int IdEspecialidad
+        
+        public Especialidad especialidad
         {
             get; set;
         }
