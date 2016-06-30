@@ -1,0 +1,5 @@
+D:\Software\TP2NET\Academia\Util\bin\Debug\Util.dll
+D:\Software\TP2NET\Academia\Util\bin\Debug\Util.pdb
+D:\Software\TP2NET\Academia\Util\obj\Debug\Util.csprojResolveAssemblyReference.cache
+D:\Software\TP2NET\Academia\Util\obj\Debug\Util.dll
+D:\Software\TP2NET\Academia\Util\obj\Debug\Util.pdb

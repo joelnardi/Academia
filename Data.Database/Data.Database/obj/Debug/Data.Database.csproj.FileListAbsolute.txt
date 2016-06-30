@@ -1,0 +1,9 @@
+D:\Software\TP2NET\Academia\Data.Database\Data.Database\bin\Debug\Data.Database.dll
+D:\Software\TP2NET\Academia\Data.Database\Data.Database\bin\Debug\Data.Database.pdb
+D:\Software\TP2NET\Academia\Data.Database\Data.Database\bin\Debug\Business.Entities.dll
+D:\Software\TP2NET\Academia\Data.Database\Data.Database\bin\Debug\Util.dll
+D:\Software\TP2NET\Academia\Data.Database\Data.Database\bin\Debug\Business.Entities.pdb
+D:\Software\TP2NET\Academia\Data.Database\Data.Database\bin\Debug\Util.pdb
+D:\Software\TP2NET\Academia\Data.Database\Data.Database\obj\Debug\Data.Database.csprojResolveAssemblyReference.cache
+D:\Software\TP2NET\Academia\Data.Database\Data.Database\obj\Debug\Data.Database.dll
+D:\Software\TP2NET\Academia\Data.Database\Data.Database\obj\Debug\Data.Database.pdb

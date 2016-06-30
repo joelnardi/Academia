@@ -1,0 +1,5 @@
+D:\Software\TP2NET\Academia\Business.Entities\bin\Debug\Business.Entities.dll
+D:\Software\TP2NET\Academia\Business.Entities\bin\Debug\Business.Entities.pdb
+D:\Software\TP2NET\Academia\Business.Entities\obj\Debug\Business.Entities.csprojResolveAssemblyReference.cache
+D:\Software\TP2NET\Academia\Business.Entities\obj\Debug\Business.Entities.dll
+D:\Software\TP2NET\Academia\Business.Entities\obj\Debug\Business.Entities.pdb

@@ -24,7 +24,7 @@ namespace Data.Database
                     Plan pla = new Plan();
                     pla.ID = (int)drPlanes["id_plan"];
                     pla.Descripcion = (string)drPlanes["desc_plan"];
-                    pla.especialidad = (new EspecialidadAdapter()).GetOne((int)drPlanes["id_especialidad"]); 
+                    pla.Especialidad = (new EspecialidadAdapter()).GetOne((int)drPlanes["id_especialidad"]); 
                     pl.Add(pla);
                 }
             }
@@ -38,7 +38,7 @@ namespace Data.Database
                 this.CloseConnection();
                 SqlConn = null;
             }
-            return new List<Plan>();
+            return pl;
         }
         public Plan GetOne(int ID)
         {
@@ -53,7 +53,7 @@ namespace Data.Database
                 {
                     pl.ID = (int)drPlanes["id_plan"];
                     pl.Descripcion = (string)drPlanes["desc_plan"];
-                    pl.especialidad = (new EspecialidadAdapter()).GetOne((int)drPlanes["id_especialidad"]);
+                    pl.Especialidad = (new EspecialidadAdapter()).GetOne((int)drPlanes["id_especialidad"]);
 
                 }
             }
@@ -74,13 +74,13 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdPlan = new SqlCommand("delete planes where @id=id_especialidad", SqlConn);
+                SqlCommand cmdPlan = new SqlCommand("delete planes where @id=id_plan", SqlConn);
                 cmdPlan.Parameters.Add("@id", SqlDbType.Int).Value = ID;
                 cmdPlan.ExecuteNonQuery();
             }
             catch (Exception Ex)
             {
-                Exception excepcionManejada = new Exception("No se pudo borrar en la base de datos", Ex);
+                Exception excepcionManejada = new Exception("No se pudo borrar de la base de datos", Ex);
                 throw excepcionManejada;
             }
             finally
@@ -138,7 +138,7 @@ namespace Data.Database
                     "id_especialidad = @id_especialidad", SqlConn);
                 cmdPlan.Parameters.Add("@id", SqlDbType.Int).Value = pl.ID;
                 cmdPlan.Parameters.Add("@descripcion", SqlDbType.VarChar, 50).Value = pl.Descripcion;
-                cmdPlan.Parameters.Add("@id_especialidad", SqlDbType.Int).Value = pl.especialidad.ID;
+                cmdPlan.Parameters.Add("@id_especialidad", SqlDbType.Int).Value = pl.Especialidad.ID;
                 cmdPlan.ExecuteNonQuery();
             }
             catch (Exception Ex)
@@ -159,7 +159,7 @@ namespace Data.Database
                 this.OpenConnection();
                 SqlCommand cmdPlan = new SqlCommand("insert into planes (desc_plan, id_especialidad) values(@descripcion, @id_esp) select @@identity", SqlConn);
                 cmdPlan.Parameters.Add("@descripcion", SqlDbType.VarChar, 50).Value = pl.Descripcion;
-                cmdPlan.Parameters.Add("@id_esp", SqlDbType.Int).Value = pl.especialidad.ID;
+                cmdPlan.Parameters.Add("@id_esp", SqlDbType.Decimal).Value =  pl.Especialidad.ID;
                 pl.ID = Decimal.ToInt32((decimal)cmdPlan.ExecuteScalar());
             }
             catch (Exception e)

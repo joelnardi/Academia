@@ -13,7 +13,7 @@ namespace Business.Entities
             get; set;
         }
         
-        public Especialidad especialidad
+        public Especialidad Especialidad
         {
             get; set;
         }

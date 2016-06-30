@@ -82,7 +82,7 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al eliminar el especialidad", Ex);
+                Exception ExcepcionManejada = new Exception("No se puede eliminar, usuario malintencionado", Ex);
                 throw ExcepcionManejada;
             }
             finally

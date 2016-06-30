@@ -37,6 +37,7 @@ namespace UI.Desktop
 
         public PlanesDesktop(int ID, ModoForm modo): this()
         {
+            this.Modo = modo;
             PlanLogic pl = new PlanLogic();
             PlanActual = pl.GetOne(ID);
             MapearDeDatos();
@@ -47,7 +48,7 @@ namespace UI.Desktop
         {
             txtID.Text = PlanActual.ID.ToString();
             txtDescripcion.Text = PlanActual.Descripcion;            
-            cmbEspecialidades.SelectedItem = PlanActual.especialidad;
+            cmbEspecialidades.SelectedItem = PlanActual.Especialidad;
             switch (this.Modo)
             {
                 case ModoForm.Alta:
@@ -78,7 +79,7 @@ namespace UI.Desktop
                 PlanActual.ID = int.Parse(txtID.Text);
             }
             PlanActual.Descripcion = txtDescripcion.Text;
-            PlanActual.especialidad = (Especialidad)cmbEspecialidades.SelectedItem;
+            PlanActual.Especialidad = (Especialidad)cmbEspecialidades.SelectedItem;
             switch (this.Modo)
             {
                 case ModoForm.Alta:
@@ -103,6 +104,7 @@ namespace UI.Desktop
             PlanLogic pl = new PlanLogic();
             try
             {
+                this.MapearADatos();
                 pl.Save(PlanActual);
             }
             catch (Exception Ex)

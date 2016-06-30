@@ -51,5 +51,27 @@ namespace UI.Desktop
             formPlan.ShowDialog();
             this.Listar();
         }
+
+        private void tsEditar_Click(object sender, EventArgs e)
+        {
+            if (this.dgvPlanes.SelectedRows.Count != 0)
+            {
+                int ID = ((Business.Entities.Plan)this.dgvPlanes.SelectedRows[0].DataBoundItem).ID;
+                PlanesDesktop formPlan = new PlanesDesktop(ID, ApplicationForm.ModoForm.Modificacion);
+                formPlan.ShowDialog();
+            }
+            this.Listar();
+        }
+
+        private void tsEliminar_Click(object sender, EventArgs e)
+        {
+            if (this.dgvPlanes.SelectedRows.Count != 0)
+            {
+                int ID = ((Business.Entities.Plan)this.dgvPlanes.SelectedRows[0].DataBoundItem).ID;
+                PlanesDesktop formPlan = new PlanesDesktop(ID, ApplicationForm.ModoForm.Baja);
+                formPlan.ShowDialog();
+            }
+            this.Listar();
+        }
     }
 }

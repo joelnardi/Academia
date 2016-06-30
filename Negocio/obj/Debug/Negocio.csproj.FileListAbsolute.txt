@@ -1,0 +1,9 @@
+D:\Software\TP2NET\Academia\Negocio\bin\Debug\Negocio.dll
+D:\Software\TP2NET\Academia\Negocio\bin\Debug\Negocio.pdb
+D:\Software\TP2NET\Academia\Negocio\bin\Debug\Business.Entities.dll
+D:\Software\TP2NET\Academia\Negocio\bin\Debug\Data.Database.dll
+D:\Software\TP2NET\Academia\Negocio\bin\Debug\Business.Entities.pdb
+D:\Software\TP2NET\Academia\Negocio\bin\Debug\Data.Database.pdb
+D:\Software\TP2NET\Academia\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+D:\Software\TP2NET\Academia\Negocio\obj\Debug\Negocio.dll
+D:\Software\TP2NET\Academia\Negocio\obj\Debug\Negocio.pdb
